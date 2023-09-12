@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/mainpage.css">
+    <title>Mainpage</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="./aboutus.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./FAQi.html">FAQ</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="./images/stars.png" id="stars" alt="stars">
+        <img src="./images/moon.png" id="moon" alt="moon">
+        <img src="./images/mountains_behind.png" id="mountains_behind" alt="mountains_behind">
+        <h2 id="text" class="ml3">MBTI PERSONALITY DETECTOR</h2>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <a href="#sec" id="btn">Next</a>
+        <img src="./images/mountains_front.png" id="mountains_front" alt="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>WHAT EXACTLY IS MBTI?</h2>
+        <p> The Myers-Briggs Type Indicator (MBTI) is based on Carl Jung’s theory of psychological type.<br> 
+            It indicates your personality preferences in four dimensions:<br>
+            1. Where you focus your attention – Extraversion (E) or Introversion (I)<br>
+            2. The way you take in information – Sensing (S) or Intuition (N)<br>
+            3. How you make decisions – Thinking (T) or Feeling (F)<br>
+            4. How you deal with the world – Judging (J) or Perceiving (P)<br><br>
+            The goal of the MBTI is to allow respondents to further explore and understand their own personalities 
+            including their likes, dislikes, strengths, weaknesses, possible career preferences, and compatibility 
+            with other people.<br>No one personality type is "best" or "better" than another.
+            It isn't a tool designed to look for dysfunction or abnormality. Instead, its goal is simply to 
+            help you learn more about yourself.
+            <a href="login.php" class="next_page">Let's Go!</a>
+            <br><br><br>
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+        });
+    </script>
+    <script src="./javascript/mainpage.js"></script>
+</body>
+</html>
